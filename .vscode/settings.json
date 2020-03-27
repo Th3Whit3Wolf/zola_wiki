@@ -1,0 +1,26 @@
+{
+    "liveSassCompile.settings.formats":[
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        // More Complex
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/css"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [ 
+        "**/node_modules/**",
+        ".vscode/**" ,
+        "**/sass/bulma/**"
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
