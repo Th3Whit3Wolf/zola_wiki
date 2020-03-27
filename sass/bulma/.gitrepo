@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/jgthms/bulma.git
+	branch = master
+	commit = be77a4889f15125b6354e33dda9f4b7d4ad17dfc
+	parent = f0b49aadfb99f5536d8baf19ad0afbb910cc4c58
+	method = merge
+	update = auto
+	cmdver = 0.4.1
