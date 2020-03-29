@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en">
+
+    <head>
+        {% block head %}
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+            <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+            <!-- SEO -->
+            {% if page.title %}
+                <title>
+                    {{ page.title }} | {{ config.title }}
+                </title>
+            {% else %}
+                <title>
+                    {{ config.title }}
+                </title>
+            {% endif %}
+
+            <!-- Enable responsiveness on mobile devices-->
+            <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+            <!--  css -->
+            <link rel="stylesheet" href="{{ get_url(path="css/main.css") | safe }}">
+
+            {% endblock head %}
+    </head>
+
+    <body>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <font color="#ffffff">magni</font> <font color="#1793d1">linux</font>
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item">Home</a>
+                    <a class="navbar-item">Packages</a>
+                    <a class="navbar-item">Forum</a>
+                    <a class="navbar-item is-active">Wiki</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="side-menu columns is-fullheight">
+            <aside id="sideMenu" class="column is-2 is-narrow-mobile is-fullheight is-hidden-mobile menu section">
+                <p class="menu-label is-hidden-touch">Main</p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Main Page</a>
+                    </li>
+                    <li>
+                        <a href="#">Table of Contents</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting Involved</a>
+                    </li>
+                    <li>
+                        <a href="#">Wiki News</a>
+                    </li>
+                    <li>
+                        <a href="#">Random Page</a>
+                    </li>
+                </ul>
+                <p class="menu-label is-hidden-touch">Interaction</p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                    <li>
+                        <a href="#">Contributing</a>
+                    </li>
+                    <li>
+                        <a href="#">Recent Changes</a>
+                    </li>
+                    <li>
+                        <a href="#">New Pages</a>
+                    </li>
+                    <li>
+                        <a href="#">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="#">Requests</a>
+                    </li>
+                </ul>
+                <p class="menu-label is-hidden-touch">Tools</p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">What Links Here</a>
+                    </li>
+                    <li>
+                        <a href="#">Related Changes</a>
+                    </li>
+                    <li>
+                        <a href="#">Special Pages</a>
+                    </li>
+                    <li>
+                        <a href="#">Printable Version</a>
+                    </li>
+                    <li>
+                        <a href="#">Permanent Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Page Information</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="container column is-8">
+                
+                    {% block content %}
+                    {% endblock content %}
+                    
+            </div>
+            <div class="container column is-2">
+                {% block anchor_menu %}{% endblock anchor_menu %}
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Magni Linux</strong> by <a href="https://jgthms.com">David Karrick</a>. The source code is licensed <a
+                            href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a
+                            href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                    </p>
+            </div>
+        </footer>
+
+        {% block js_body %}
+            {% if config.build_search_index %}
+                <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
+                <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}"></script>
+            {% endif %}
+            <script type="text/javascript" src="{{ get_url(path="js/main.js") | safe }}"></script>
+        {% endblock js_body %}
+
+    </body>
+</html>
+
+</html>
