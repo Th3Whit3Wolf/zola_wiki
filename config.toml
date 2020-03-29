@@ -9,7 +9,7 @@ description = "Wiki for Magni Linux"
 default_language = "en"
 
 # The site theme to use.
-theme = ""
+#theme = ""
 
 # When set to "true", all code blocks are highlighted.
 highlight_code = false
