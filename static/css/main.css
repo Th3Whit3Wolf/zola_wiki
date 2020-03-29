@@ -1,4 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans&display=swap);
+@font-face {
+  font-family: 'Fira Sans';
+  src: local("Fira Sans Regular"), url("../fonts/Fira/woff2/FiraSans-Regular.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local("Fira Sans Bold"), url("../fonts/Fira/woff2/FiraSans-Bold.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local("Fira Sans Regular Italic"), url("../fonts/Fira/woff2/FiraSans-RegularItalic.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local("Fira Sans Bold Italic"), url("../fonts/Fira/woff2/FiraSans-BoldItalic.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-BoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
 @-webkit-keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -9,6 +36,7 @@
             transform: rotate(359deg);
   }
 }
+
 @keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
