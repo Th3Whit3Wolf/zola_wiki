@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/mozilla/Fira.git
+	branch = master
+	commit = fd8c8c0a3d353cd99e8ca1662942d165e6961407
+	parent = edcfd655ed76b67d418e39706b3301f10e9e58bd
+	method = merge
+	update = auto
+	cmdver = 0.4.1
