@@ -14,11 +14,17 @@
     "liveSassCompile.settings.excludeList": [ 
         "**/node_modules/**",
         ".vscode/**" ,
-        "**/sass/bulma/**"
+        "**/sass/bulma/**",
+        "**/static/fonts/Fira/**"
     ],
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.autoprefix": [
         "> 1%",
         "last 2 versions"
-    ]
+    ],
+    "markdownlint.ignore": [
+        "MD033",
+        "MD025"
+    ],
+    "git.ignoreLimitWarning": true
 }
