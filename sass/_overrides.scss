@@ -78,7 +78,7 @@ h6 {
 
 .navbar {
 
-    border-bottom: 5px #08c solid;
+    border-bottom: 5px $royal solid;
 
     .navbar-link,
     .navbar-item {
@@ -134,4 +134,30 @@ h6 {
             }
         }
     }
+}
+
+section {
+    padding-bottom: 0px;
+    height: 100%;
+}
+
+.columns:not(:last-child) {
+    margin-bottom: 0px;
+}
+
+#sideMenu,
+.footer,
+#anchorMenu {
+    background-color: #fafafa;
+}
+
+#mainContent {
+    box-shadow: 5px;
+    background-color: #fefefe;
+    border-radius: 32em;
+}
+
+.sticky {
+    position: sticky;
+    top: calc(#{$navbar-height} * 4 / 3);
 }
