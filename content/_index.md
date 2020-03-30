@@ -41,7 +41,7 @@ Guide through the process of installing Magni Linux.
 
 Annotated index of post-installation tutorials and other popular articles.</p>
 
-#### List of applications
+### List of applications
 
 Categorized presentation of common official and AUR packages.
 
