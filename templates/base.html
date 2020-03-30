@@ -30,7 +30,7 @@
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <font color="#ffffff">magni</font> <font color="#1793d1">linux</font>
+                    <font color="#ffffff">magni</font> <font color="#7851a9">linux</font>
                 </a>
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
@@ -50,11 +50,12 @@
         </nav>
 
         <section class="side-menu columns is-fullheight">
-            <aside id="sideMenu" class="column is-2 is-narrow-mobile is-fullheight is-hidden-mobile menu section">
+            <aside id="sideMenu" class="column is-2 is-narrow-mobile is-fullheight is-hidden-mobile section">
+            <div class="menu sticky">
                 <p class="menu-label is-hidden-touch">Main</p>
                 <ul class="menu-list">
                     <li>
-                        <a href="#">Main Page</a>
+                        <a href="#" class="is-active">Main Page</a>
                     </li>
                     <li>
                         <a href="#">Table of Contents</a>
@@ -111,22 +112,21 @@
                         <a href="#">Page Information</a>
                     </li>
                 </ul>
+                </div>
             </aside>
 
-            <div class="container column is-8">
-                
+            <div id="mainContent" class="container column is-8">
                     {% block content %}
                     {% endblock content %}
-                    
             </div>
-            <div class="container column is-2">
+            <div id="anchorMenu" class="container column is-2">
                 {% block anchor_menu %}{% endblock anchor_menu %}
             </div>
         </section>
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                    <strong>Magni Linux</strong> by <a href="https://jgthms.com">David Karrick</a>. The source code is licensed <a
+                    <strong>Magni Linux</strong> by David Karrick. The source code is licensed <a
                             href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a
                             href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
                     </p>
