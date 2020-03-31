@@ -145,21 +145,20 @@ section {
     margin-bottom: 0px;
 }
 
-#sideMenu,
-.footer,
-#anchorMenu {
+body {
     background-color: #fafafa;
 }
 
 #mainContent {
-    box-shadow: 5px;
+    box-shadow: $box-shadow;
     background-color: #fefefe;
-    border-radius: 32em;
+    padding: 1em;
+    border-radius: $radius-large;
 }
 
 .sticky {
     position: sticky;
-    top: calc(#{$navbar-height} * 4 / 3);
+    top: calc(#{$navbar-height} + 3rem);
 }
 
 .menu-list li ul {
@@ -175,6 +174,54 @@ section {
 }
 
 a.toc-is-active {
-    background-color: #4f4473 !important;
-    color: #fff !important;
+    background-color: $royal !important;
+    color: white;
+
+    &:hover {
+        background-color: $royal !important;
+        color: white !important;
+    }
+}
+
+.container.space {
+    background-color: #fafafa;
+    padding: 2.5em;
+}
+
+.container.search {
+    background-color: #fefefe;
+    padding: 1rem 2.5rem 1rem calc(2.5rem + 5px);
+    border-radius: $radius-large;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    box-shadow: $box-shadow;
+}
+
+input.input.is-rounded {
+    color: $gPurp;
+    background-color: $grey-lighter;
+}
+
+div.control a.button {
+    background-color: $royal;
+    border-top-right-radius: $radius-rounded;
+    border-bottom-right-radius: $radius-rounded;
+    color: white;
+}
+
+.field.has-addons {
+    padding: 0em 1.25em;
+}
+
+button.button {
+    color: $white;
+    background-color: $royal;
+}
+
+.box.category {
+    padding: 1em;
+    margin : 2em;
+    background-color: #fafafa;
+    box-shadow: 0 1px 2px  #eaeaea inset;
 }
