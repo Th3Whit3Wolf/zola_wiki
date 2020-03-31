@@ -12171,6 +12171,23 @@ section {
   top: calc(5rem * 4 / 3);
 }
 
+.menu-list li ul {
+  border-left: none;
+}
+
+*[id]::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+}
+
+a.toc-is-active {
+  background-color: #4f4473 !important;
+  color: #fff !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
