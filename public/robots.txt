@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://0.0.0.0:3131/sitemap.xml

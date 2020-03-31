@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>http://0.0.0.0:3131/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Interaction/contributing/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Interaction/help/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Interaction/new-pages/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Interaction/recent-changes/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Interaction/requests/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Interaction/statistics/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Main/getting-involved/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Main/news/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Main/table-of-contents/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Pages/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://0.0.0.0:3131/Pages/magni-linux/</loc>
+            
+        </url>
+    
+</urlset>

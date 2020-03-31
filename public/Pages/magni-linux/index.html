@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en">
+
+    <head>
+        
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+            <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+            <!-- SEO -->
+            
+                <title>
+                    Magni Linux | MagniWiki
+                </title>
+            
+
+            <!-- Enable responsiveness on mobile devices-->
+            <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+            <!--  css -->
+            <link rel="stylesheet" href="http://0.0.0.0:3131/css/main.css">
+
+            
+    </head>
+
+    <body>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://magnilinux.org">
+                    <font color="#ffffff">magni</font> <font color="#7851a9">linux</font>
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="https://magnilinux.org">Home</a>
+                    <a class="navbar-item" href="https://pkg.magnilinux.org">Packages</a>
+                    <a class="navbar-item" href="https://forum.magnilinux.org">Forum</a>
+                    <a class="navbar-item is-active" href="/">Wiki</a>
+                    <a class="navbar-item" href="https://our.magnilinux.org">OUR</a>
+                    <a class="navbar-item" href="https://magnilinux.org/downloads">Downloads</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="side-menu columns is-fullheight">
+            <aside id="sideMenu" class="column is-2 is-narrow-mobile is-fullheight is-hidden-mobile section">
+            <div class="menu sticky">
+                <p class="menu-label is-hidden-touch">Main</p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="/" >Main Page</a>
+                    </li>
+                    <li>
+                        <a href="@/Main/Table_of_Contents.md">Table of Contents</a>
+                    </li>
+                    <li>
+                        <a href="@/Main/Getting_Involved.md">Getting Involved</a>
+                    </li>
+                    <li>
+                        <a href="@/Main/News.md">Wiki News</a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/random?">Random Page</a>
+                    </li>
+                </ul>
+                <p class="menu-label is-hidden-touch">Interaction</p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="@/Interaction/Help.md">Help</a>
+                    </li>
+                    <li>
+                        <a href="@/Interaction/Contributing.md">Contributing</a>
+                    </li>
+                    <li>
+                        <a href="@/Interaction/Recent_Changes.md">Recent Changes</a>
+                    </li>
+                    <li>
+                        <a href="@/Interaction/New_Pages.md">New Pages</a>
+                    </li>
+                    <li>
+                        <a href="@/Interaction/Statistics.md">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="@/Interaction/Requests.md">Requests</a>
+                    </li>
+                </ul>
+                <p class="menu-label is-hidden-touch">Tools</p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/what_links_here?">What Links Here</a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/related_changes?">Related Changes</a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/special_pages?">Special Pages</a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/printable_version?">Printable Version</a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/permanent_links?">Permanent Link</a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.magnilinux.org/Query/page_information?">Page Information</a>
+                    </li>
+                </ul>
+                </div>
+            </aside>
+
+            <div id="mainContent" class="container column is-8">
+                    
+<div class="section">
+    <div class="content">
+    <h1 id="magni-linux">Magni Linux</h1>
+<hr />
+<p>Magni Linux is an independently dveloped, x86-64 general purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling release model.
+The default installation is a minimalistic base system, configured by the user to only add what is purposely required while also providing sensible defaults to give the user a better experience.</p>
+<h2 id="principles">Principles</h2>
+<hr />
+<h3 id="simplicity">Simplicity</h3>
+<p>Magni Linux defines simplicity as <strong><em>sensible defaults without unnecessary additions or modifications</em></strong>. It ships software as released by the original developers (<a href="https://en.wikipedia.org/wiki/Upstream_(software_development)">upstream</a>) with minimal distribution-specific (downstream) changes: patches not accepted by upstream are avoided, and Magni's downstream patches consist almost entirely of backported bug fixes thar are obsoleted by the project's next release.</p>
+<p>In a similiar fashion, Magni ships the configuration files provided by upstream with changes to distribution-specfic issues, like adjusting the system file paths, sometimes with better defaults for the average user, and potentially udev rules(or other system configuration settings) to give the user the most performance and best experience.
+Magni's package manager, omni, config file <code>/etc/omni.conf</code> allows you to configure whether or not you'd like a package's service to be enabled or not after being installed. It also allows you to choose whether or not you'd like to enable the Omni User Repository.</p>
+<p>Pacakges are only split when compelling advatages exist, such as to save disk space in particularly bad cases of waste. GUI configuration utilities are not officially provided, encouraging users to perform most system configuration from the shell and a text editor.</p>
+<h3 id="modernity">Modernity</h3>
+<p>Magni Linux strives to maintain the latest stabke release versions of its software as long as systemic breaking changes can be reasonably avoided.
+It is based on a <a href="https://en.wikipedia.org/wiki/Rolling_release">rolling-release</a> system, which allows a one-time installation with continuos upgrades.</p>
+<p>Magni incorporates many of the newer features available to Linux users, including <a href="https://wiki.archlinux.org/index.php/Systemd">systemd</a> init system, modern <a href="https://wiki.archlinux.org/index.php/File_systems">file systems</a>, LVM2, software RAID, udev support and inintcpio (with <a href="https://wiki.archlinux.org/index.php/Dracut">dracut</a>), as well as the latest available kernels.</p>
+<h3 id="pragmatism-idealogical">Pragmatism/Idealogical</h3>
+<p>Magni tries to be pragmatic. The principles here are only useful guidelines.
+Ultimately, design decisions are made on a case-by-case basis through developer consensus.
+Evidence-based technical analysis and debate are what matter, not politics or popular opinion.</p>
+<p>Magni Linux seprates it's repositories similiar to Debian source components.</p>
+<ul>
+<li>
+<p><strong>Main</strong> consist of <a href="https://www.debian.org/social_contract#guidelines">DFDSG</a>-compliant packages, which do not rely on software outside this arena to operate. These are the only packages considered part of Magni Linux.</p>
+</li>
+<li>
+<p><strong>Contrib</strong> packages contain DFSG-compliant software, but have dependencies not in main (possibly package for Magni Linux in non-free)</p>
+</li>
+<li>
+<p><strong>Non_Free</strong> contains software that does not comply with DFSG.</p>
+</li>
+</ul>
+<h3 id="small-fast-featureful">Small, Fast, Featureful</h3>
+<p>Magni Linux take a different path than most Linux distros in that it tries to replace normal tools written in C with similiar tools that are faster written in safer languages. We use these tools because they are faster and have fewer bugs and vulnerabilities. Many of these tools also have more features than their C counterpart. </p>
+<p>Magni Linux intends to be competetive with fastest of Linux distros, with that goal in mind many of packages in the Magni Linux use PGO (Profile Guided Optimization), and Static Linking, and other optimizations.</p>
+<h3 id="versatility">Versatility</h3>
+<p>Magni Linux is a general-purpose distribution. Upon installation, only a command-line environment is provided: rather than tearing out unneeded and unwanted packages, the user is offered the ability to build a custom system by choosing among thousands of high-quality packages provided in the official repositories for the x86-64 architecture.</p>
+<p>Arch is backed by omni, a lightweight, simple and fast package manager that allows to upgrade the entire system with one command. Magni also provides the Magni Build System, a ports-like system to make it easy to build and install packages from source, which can also be synchronized with one command. In addition, the Omni User Repository contains many thousands more of community-contributed pkg.mk scripts for compiling installable packages from source. It is also possible for users to build and maintain their own custom repositories with ease. </p>
+<h2 id="history">History</h2>
+<hr />
+<h3 id="the-early-years-now">The Early Years (now)</h3>
+<p>David Karrick, an American programmer, began working on Magni Linux in 2020. Inspired by Clear Linux, Arch Linux(and some of it's derivatives), and Void Linux. </p>
+
+    </div>
+</div>
+
+            </div>
+            <div id="anchorMenu" class="container column is-2">
+                
+<aside class="toc menu sticky">
+    <ul>
+        
+        <li>
+            
+            <ul class="menu-list">
+                
+                <li>
+                    <a href="http://0.0.0.0:3131/Pages/magni-linux/#principles">Principles</a>
+                    
+                    <ul class="menu-list">
+                        
+                        <li>
+                            <a href="http://0.0.0.0:3131/Pages/magni-linux/#simplicity">Simplicity</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://0.0.0.0:3131/Pages/magni-linux/#modernity">Modernity</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://0.0.0.0:3131/Pages/magni-linux/#pragmatism-idealogical">Pragmatism&#x2F;Idealogical</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://0.0.0.0:3131/Pages/magni-linux/#small-fast-featureful">Small, Fast, Featureful</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://0.0.0.0:3131/Pages/magni-linux/#versatility">Versatility</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li>
+                    <a href="http://0.0.0.0:3131/Pages/magni-linux/#history">History</a>
+                    
+                    <ul class="menu-list">
+                        
+                        <li>
+                            <a href="http://0.0.0.0:3131/Pages/magni-linux/#the-early-years-now">The Early Years (now)</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+    </ul>
+</aside>
+
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Magni Linux</strong> by David Karrick. The source code is licensed <a
+                            href="https://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a
+                            href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                    </p>
+            </div>
+        </footer>
+
+        
+            
+            <script type="text/javascript" src="http://0.0.0.0:3131/js/main.js"></script>
+        
+
+    </body>
+</html>
+
+</html>
