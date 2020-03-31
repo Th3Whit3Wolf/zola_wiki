@@ -18,7 +18,7 @@ Visit the Table of contents for a listing of article categories.
 <div class="columns">
 <div class="column">
 
-### Magni Linux
+### [Magni Linux](@/Pages/Magni_Linux.md)
 
 Overview of Magni Linux describing what to expect from an Magni Linux system.
 
