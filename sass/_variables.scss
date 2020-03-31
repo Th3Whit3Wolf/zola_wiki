@@ -9,6 +9,7 @@ $blue:         #1F9BCF;
 $red:          #d9534f;
 $royal:        #7851a9;
 $gPurp:        #4f4473;
+$white-ter:    #ecf0f1;
 
 $primary: #121212 !default;
 $link: $grey;
@@ -38,6 +39,13 @@ $navbar-dropdown-item-active-color: #fff;
 $navbar-dropdown-item-hover-color: $grey-lighter;
 $navbar-dropdown-item-hover-background-color: transparent;
 $navbar-dropdown-item-active-background-color: transparent;
+
+$button-color: $white-ter;
+$button-hover-color: darken($white-ter, 25); // primary-dark
+$button-focus: darken($white-ter, 25); // primary-dark
+$button-active-color: darken($white-ter, 25); // primary-dark
+
+$button-background-color: $royal;
 
 $link: $royal;
 $link-visited: $gPurp;
