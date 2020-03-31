@@ -46,7 +46,7 @@ Magni Linux seprates it's repositories similiar to Debian source components.
 
 ### Small, Fast, Featureful
 
-Magni Linux take a different path than most Linux distros in that it tries to replace normal tools written in C with similiar tools that are faster written in safer languages. We use these tools because they are faster and have fewer bugs and vulnerabilities. Many of these tools also have more features than their C counterpart. 
+Magni Linux take a different path than most Linux distros in that it tries to replace normal tools written in C with similiar tools that are faster written in safer languages. We use these tools because they are faster and have fewer bugs and vulnerabilities. Many of these tools also have more features than their C counterpart.
 
 Magni Linux intends to be competetive with fastest of Linux distros, with that goal in mind many of packages in the Magni Linux use PGO (Profile Guided Optimization), and Static Linking, and other optimizations.
 
@@ -54,7 +54,7 @@ Magni Linux intends to be competetive with fastest of Linux distros, with that g
 
 Magni Linux is a general-purpose distribution. Upon installation, only a command-line environment is provided: rather than tearing out unneeded and unwanted packages, the user is offered the ability to build a custom system by choosing among thousands of high-quality packages provided in the official repositories for the x86-64 architecture.
 
-Arch is backed by omni, a lightweight, simple and fast package manager that allows to upgrade the entire system with one command. Magni also provides the Magni Build System, a ports-like system to make it easy to build and install packages from source, which can also be synchronized with one command. In addition, the Omni User Repository contains many thousands more of community-contributed pkg.mk scripts for compiling installable packages from source. It is also possible for users to build and maintain their own custom repositories with ease. 
+Arch is backed by omni, a lightweight, simple and fast package manager that allows to upgrade the entire system with one command. Magni also provides the Magni Build System, a ports-like system to make it easy to build and install packages from source, which can also be synchronized with one command. In addition, the Omni User Repository contains many thousands more of community-contributed pkg.mk scripts for compiling installable packages from source. It is also possible for users to build and maintain their own custom repositories with ease.
 
 ## History
 
@@ -62,5 +62,15 @@ Arch is backed by omni, a lightweight, simple and fast package manager that allo
 
 ### The Early Years (now)
 
-David Karrick, an American programmer, began working on Magni Linux in 2020. Inspired by Clear Linux, Arch Linux(and some of it's derivatives), and Void Linux. 
+David Karrick, an American programmer, began working on Magni Linux in 2020. Inspired by Clear Linux, Arch Linux(and some of it's derivatives), and Void Linux.
 
+```rs
+fn main() {
+    println!("Hello {}!", "World");
+    add_two(2);
+}
+
+fn add_two(x: u64) -> u64 {
+    x + 2
+}
+```
