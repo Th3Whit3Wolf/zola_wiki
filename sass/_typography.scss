@@ -37,3 +37,12 @@
     font-weight: 600;
     font-style: italic;
 }
+
+// Mono
+@font-face{
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('../fonts/JetBrainsMono/woff/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
