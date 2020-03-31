@@ -14,8 +14,8 @@
     "liveSassCompile.settings.excludeList": [ 
         "**/node_modules/**",
         ".vscode/**" ,
-        "**/sass/bulma/**",
-        "**/static/fonts/Fira/**"
+        "**/bulma/**",
+        "**/Fira/**"
     ],
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.autoprefix": [
