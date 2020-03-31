@@ -145,8 +145,8 @@ section {
     margin-bottom: 0px;
 }
 
-body {
-    background-color: #fafafa;
+body, .footer {
+    background-color: $white-ter;
 }
 
 #mainContent {
@@ -184,7 +184,7 @@ a.toc-is-active {
 }
 
 .container.space {
-    background-color: #fafafa;
+    background-color: $white-ter;
     padding: 2.5em;
 }
 
@@ -204,24 +204,28 @@ input.input.is-rounded {
 }
 
 div.control a.button {
-    background-color: $royal;
     border-top-right-radius: $radius-rounded;
     border-bottom-right-radius: $radius-rounded;
-    color: white;
 }
 
 .field.has-addons {
     padding: 0em 1.25em;
 }
 
-button.button {
-    color: $white;
-    background-color: $royal;
-}
-
 .box.category {
     padding: 1em;
     margin : 2em;
-    background-color: #fafafa;
+    background-color: $white-ter;
     box-shadow: 0 1px 2px  #eaeaea inset;
+}
+
+.message-header, .panel-heading {
+    font-weight: $weight-bold;
+}  
+
+
+
+pre {
+    border-radius: $radius-large;
+    font-family: $family-code;
 }
