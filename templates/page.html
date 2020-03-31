@@ -1,5 +1,62 @@
 {% extends "base.html" %}
 
+{% block lang_select %}
+{% if page.lang %}{% set now_lang = page.lang | default (value=config.default_language) %}{% endif %}
+
+<div class="dropdown">
+    <div class="dropdown-trigger">
+        <button class="button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
+            {% if now_lang == "ar" %}
+            الأرجنتين
+            {% elif now_lang == "az" %}
+            Azərbaycan
+            {% elif now_lang == "be" %}
+            Бельгія
+            {% elif now_lang == "de" %}
+            Deutsche
+            {% elif now_lang == "en" %}
+            English
+            {% elif now_lang == "es" %}
+            Español
+            {% elif now_lang == "fr" %}
+            Français
+            {% elif now_lang == "it" %}
+            Italiano
+            {% endif %}
+        </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+            {% if page.lang !=  config.default_language %}
+            {% set eng_path = page.path | split(pat="/") | slice(start=1) | join(sep="/") %}
+            <a href="/{{ eng_path }}" class="dropdown-item">
+                English
+            </a>
+            {% endif %}
+            {% for translation in page.translations %}
+            <a href="{{ translation.permalink }}" class="dropdown-item">
+                {% if translation.lang == "ar" %}
+                الأرجنتين
+                {% elif translation.lang == "az" %}
+                Azərbaycan
+                {% elif translation.lang == "be" %}
+                Бельгія
+                {% elif translation.lang == "de" %}
+                Deutsche
+                {% elif translation.lang == "es" %}
+                Español
+                {% elif translation.lang == "fr" %}
+                Français
+                {% elif translation.lang == "it" %}
+                Italiano
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock lang_select %}
+
 {% block content %}
 <div class="section">
     <div class="content">
