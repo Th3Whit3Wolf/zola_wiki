@@ -14,10 +14,12 @@ $primary: #121212 !default;
 $link: $grey;
 
 $family-sans-serif: "Fira Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$family-code: "JetBrains Mono";
 $body-size: 14px;
 
-$radius: 0;
-$radius-small: $radius;
+$radius-small: 4px;
+$radius: 6px;
+$radius-large: 8px;
 
 $menu-item-active-background-color: $royal;
 
@@ -37,4 +39,5 @@ $navbar-dropdown-item-hover-color: $grey-lighter;
 $navbar-dropdown-item-hover-background-color: transparent;
 $navbar-dropdown-item-active-background-color: transparent;
 
-$box-shadow: 0 0 0 1px $grey-lighter;
+$link: $royal;
+$link-visited: $gPurp;
