@@ -12174,7 +12174,7 @@ section {
   margin-bottom: 0px;
 }
 
-body, .footer {
+body, html, .footer {
   background-color: #ecf0f1;
 }
 
@@ -12187,8 +12187,7 @@ body, .footer {
 }
 
 .sticky {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: calc(5rem + 3rem);
 }
 
