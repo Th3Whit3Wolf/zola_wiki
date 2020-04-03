@@ -33,10 +33,6 @@
   font-style: normal;
 }
 
-p {
-  font-weight: 500;
-}
-
 h1 {
   font-size: 31px;
   margin: .67em 0;
@@ -11925,7 +11921,9 @@ label.panel-block:hover {
 }
 
 body {
-  font-weight: 200;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6;
   letter-spacing: 1px;
 }
 
@@ -12227,6 +12225,9 @@ a.toc-is-active:hover {
   border-radius: 8px;
   -webkit-box-shadow: 0 1px 2px #eaeaea inset;
           box-shadow: 0 1px 2px #eaeaea inset;
+}
+
+.ar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12257,7 +12258,7 @@ div.control a.button {
 }
 
 .category {
-  margin: 0em 0em;
+  margin: 0em 1em;
 }
 
 pre {
