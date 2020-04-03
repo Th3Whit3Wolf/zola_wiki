@@ -1,18 +1,12 @@
 +++
 title = "Magni Linux"
-description = "What is Magni Linux?"
+description = """Magni Linux is an independently developed, x86-64 general purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling release model.
+The default installation is a minimalistic base system, configured by the user to only add what is purposely required while also providing sensible defaults to give the user a better experience."""
+[taxonomies]
+category = ["About Magni"]
 +++
 
-# Magni Linux
-
----
-
-Magni Linux is an independently dveloped, x86-64 general purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling release model.
-The default installation is a minimalistic base system, configured by the user to only add what is purposely required while also providing sensible defaults to give the user a better experience.
-
 ## Principles
-
----
 
 ### Simplicity
 
@@ -48,7 +42,7 @@ Magni Linux seprates it's repositories similiar to Debian source components.
 
 Magni Linux take a different path than most Linux distros in that it tries to replace normal tools written in C with similiar tools that are faster written in safer languages. We use these tools because they are faster and have fewer bugs and vulnerabilities. Many of these tools also have more features than their C counterpart.
 
-Magni Linux intends to be competetive with fastest of Linux distros, with that goal in mind many of packages in the Magni Linux use PGO (Profile Guided Optimization), and Static Linking, and other optimizations.
+Magni Linux intends to be competitive with fastest of Linux distros, with that goal in mind many of packages in the Magni Linux use PGO (Profile Guided Optimization), and Static Linking, and other optimizations.
 
 ### Versatility
 
@@ -58,19 +52,6 @@ Arch is backed by omni, a lightweight, simple and fast package manager that allo
 
 ## History
 
----
-
 ### The Early Years (now)
 
 David Karrick, an American programmer, began working on Magni Linux in 2020. Inspired by Clear Linux, Arch Linux(and some of it's derivatives), and Void Linux.
-
-```rs
-fn main() {
-    println!("Hello {}!", "World");
-    add_two(2);
-}
-
-fn add_two(x: u64) -> u64 {
-    x + 2
-}
-```
