@@ -1,29 +1,14 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <div class="section">
-        <div class="content">
-            <h1>{{section.title}}</h1>
-            <p>{{section.description}}</p>
-            {{ section.content | safe }}
-            {% if section.taxonomies %}
-                <div class="box category">
-                    <a href="/category">
-                        <strong>Category</a>:</strong>
-                    {% for cat in section.taxonomies.category %}
-                        <a href="/category/{{cat | lower | replace(from=" ", to="-") }}">{{ cat }}</a>
-                        {% if section.taxonomies.category | length > 1 %}
-                            {% if loop.index != section.taxonomies.category | length %}
-                                {% if loop.index == section.taxonomies.category | length - 1 %}
-                            and
-                            {% else %}
-                            ,
-                            {% endif %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            {% endif %}
-        </div>
-    </div>
-{% endblock content %}
+{% block title %}
+    {% if section.title %}
+<title>
+    {{ section.title }} | {{ config.title }}
+</title>
+    {% else %}
+<title>
+    {{ config.title }}
+</title>
+    {% endif %}
+{% endblock title %}
+
