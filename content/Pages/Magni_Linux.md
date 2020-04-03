@@ -2,6 +2,7 @@
 title = "Magni Linux"
 description = """Magni Linux is an independently developed, x86-64 general purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling release model.
 The default installation is a minimalistic base system, configured by the user to only add what is purposely required while also providing sensible defaults to give the user a better experience."""
+date = 2020-03-31
 [taxonomies]
 category = ["About Magni"]
 +++
