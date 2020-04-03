@@ -1,5 +1,7 @@
 body {
-    font-weight: 200;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.6;
     letter-spacing: 1px;
 }
 
@@ -193,6 +195,9 @@ a.toc-is-active {
     padding: 1rem 2.5rem 1rem calc(2.5rem + 5px);
     border-radius: $radius-large;
     box-shadow: $box-shadow;
+}
+
+.ar {
     display: flex;
     align-items: right;
     justify-content: right;
@@ -217,7 +222,7 @@ div.control a.button {
 }  
 
 .category {
-    margin : 0em 0em;
+    margin : 0em 1em;
 }
 
 pre {
