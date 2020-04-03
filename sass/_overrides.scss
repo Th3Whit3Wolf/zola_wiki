@@ -192,15 +192,15 @@ a.toc-is-active {
     background-color: #fefefe;
     padding: 1rem 2.5rem 1rem calc(2.5rem + 5px);
     border-radius: $radius-large;
+    box-shadow: $box-shadow;
     display: flex;
     align-items: right;
     justify-content: right;
-    box-shadow: $box-shadow;
 }
 
 input.input.is-rounded {
     color: $gPurp;
-    background-color: $grey-lighter;
+    background-color: $white-ter;
 }
 
 div.control a.button {
@@ -209,23 +209,33 @@ div.control a.button {
 }
 
 .field.has-addons {
-    padding: 0em 1.25em;
-}
-
-.box.category {
-    padding: 1em;
-    margin : 2em;
-    background-color: $white-ter;
-    box-shadow: 0 1px 2px  #eaeaea inset;
+    padding: 0em 1em;
 }
 
 .message-header, .panel-heading {
     font-weight: $weight-bold;
 }  
 
-
+.category {
+    margin : 0em 0em;
+}
 
 pre {
     border-radius: $radius-large;
     font-family: $family-code;
+}
+
+code {
+    background-color: $white-ter;
+    font-family: $family-code;
+    color: $royal;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #e1e1e1;
 }
