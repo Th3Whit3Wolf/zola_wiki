@@ -40,7 +40,9 @@ generate_rss = false
 #       {name = "authors"}, # Basic definition: no RSS or pagination
 #     ]
 #
-taxonomies = []
+taxonomies = [
+    {name = "category"}
+]
 
 # The additional languages for the site.
 # Example:
