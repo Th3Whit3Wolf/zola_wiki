@@ -147,7 +147,7 @@ section {
     margin-bottom: 0px;
 }
 
-body, .footer {
+body, html, .footer {
     background-color: $white-ter;
 }
 
@@ -159,7 +159,7 @@ body, .footer {
 }
 
 .sticky {
-    position: sticky;
+    position: fixed;
     top: calc(#{$navbar-height} + 3rem);
 }
 
