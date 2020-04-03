@@ -1,114 +1,58 @@
 {% extends "base.html" %}
 
-{% block lang_select %}
-{% if page.lang %}{% set now_lang = page.lang | default (value=config.default_language) %}{% endif %}
-
-<div class="dropdown">
-    <div class="dropdown-trigger">
-        <button class="button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
-            {% if now_lang == "ar" %}
-            الأرجنتين
-            {% elif now_lang == "az" %}
-            Azərbaycan
-            {% elif now_lang == "be" %}
-            Бельгія
-            {% elif now_lang == "de" %}
-            Deutsche
-            {% elif now_lang == "en" %}
-            English
-            {% elif now_lang == "es" %}
-            Español
-            {% elif now_lang == "fr" %}
-            Français
-            {% elif now_lang == "it" %}
-            Italiano
+{% block content %}
+    <div class="section">
+        <div class="content">
+            <h1>{{page.title}}</h1>
+            <p>{{page.description}}</p>
+            {{ page.content | safe }}
+            {% if page.taxonomies %}
+                <div class="box category">
+                    <a href="/category">
+                        <strong>Category</a>:</strong>
+                    {% for cat in page.taxonomies.category %}
+                        <a href="/category/{{cat | lower | replace(from=" ", to="-")}}">{{ cat }}</a>
+                        {% if page.taxonomies.category | length > 1 %}
+                            {% if loop.index != page.taxonomies.category | length %}
+                                {% if loop.index == page.taxonomies.category | length - 1 %}
+                            and
+                            {% else %}
+                            ,
+                            {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
             {% endif %}
-        </button>
-    </div>
-    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-            {% if page.lang !=  config.default_language %}
-            {% set eng_path = page.path | split(pat="/") | slice(start=1) | join(sep="/") %}
-            <a href="/{{ eng_path }}" class="dropdown-item">
-                English
-            </a>
-            {% endif %}
-            {% for translation in page.translations %}
-            <a href="{{ translation.permalink }}" class="dropdown-item">
-                {% if translation.lang == "ar" %}
-                الأرجنتين
-                {% elif translation.lang == "az" %}
-                Azərbaycan
-                {% elif translation.lang == "be" %}
-                Бельгія
-                {% elif translation.lang == "de" %}
-                Deutsche
-                {% elif translation.lang == "es" %}
-                Español
-                {% elif translation.lang == "fr" %}
-                Français
-                {% elif translation.lang == "it" %}
-                Italiano
-                {% endif %}
-            </a>
-            {% endfor %}
         </div>
     </div>
-</div>
-{% endblock lang_select %}
-
-{% block content %}
-<div class="section">
-    <div class="content">
-    {{ page.content | safe }}
-    </div>
-</div>
 {% endblock content %}
 
 {% block anchor_menu %}
-<aside class="toc menu sticky">
-    <ul>
-        {% for h1 in page.toc %}
-        <li>
-            {% if h1.children %}
-            <ul class="menu-list">
-                {% for h2 in h1.children %}
+    <aside class="toc menu sticky">
+        <ul>
+            {% for h1 in page.toc %}
                 <li>
-                    <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
-                    {% if h2.children %}
-                    <ul class="menu-list">
-                        {% for h3 in h2.children %}
-                        <li>
-                            <a href="{{h3.permalink | safe}}">{{ h3.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    {% if h1.children %}
+                        <ul class="menu-list">
+                            {% for h2 in h1.children %}
+                                <li>
+                                    <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
+                                    {% if h2.children %}
+                                        <ul class="menu-list">
+                                            {% for h3 in h2.children %}
+                                                <li>
+                                                    <a href="{{h3.permalink | safe}}">{{ h3.title }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
                     {% endif %}
                 </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ul>
-</aside>
+            {% endfor %}
+        </ul>
+    </aside>
 {% endblock anchor_menu %}
-
-<div class="toc-menu">
-    <ul>
-        {% for h2 in page.toc %}
-        <li>
-            <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
-            {% if h2.children %}
-            <ul>
-                {% for h3 in h2.children %}
-                <li>
-                    <a href="{{h3.permalink | safe}}">{{ h3.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ul>
-</div>

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top" lang="{{ lang | default (value=config.default_language) }}">
+{% if page.lang %}{% set now_lang = page.lang %}
+{% elif section.lang %}{% set now_lang = section.lang %}
+{% else %}{% set now_lang = config.default_language %}
+{% endif %}
+
+<html class="has-navbar-fixed-top" lang="{{ now_lang }}">
 
     <head>
         {% block head %}
@@ -61,61 +66,40 @@
                     <p class="menu-label is-hidden-touch">Main</p>
                     <ul class="menu-list">
                         <li>
-                            <a href="/" {% if current_path == "/" %}class="is-active" {% endif %}>Main Page</a>
+                            <a href="/" {% if current_path == "/" %}class="is-active"{% endif %}>Main Page</a>
                         </li>
                         <li>
-                            <a href="@/Main/Table_of_Contents.md">Table of Contents</a>
+                            <a href="/table-of-contents/" {% if page.relative_path and page.relative_path == "Main/Table_of_Contents.md" %}class="is-active"{% endif %}>Table of Contents</a>
                         </li>
                         <li>
-                            <a href="@/Main/Getting_Involved.md">Getting Involved</a>
+                            <a href="/getting-involved/" {% if page.relative_path and page.relative_path == "Main/Getting_Involved.md" %}class="is-active"{% endif %}>Getting Involved</a>
                         </li>
                         <li>
-                            <a href="@/Main/News.md">Wiki News</a>
+                            <a href="/news" {% if page.relative_path and page.relative_path == "Main/News.md" %}class="is-active"{% endif %}>Wiki News</a>
                         </li>
                         <li>
-                            <a href="https://wiki.magnilinux.org/Query/random?">Random Page</a>
+                            <a href="/Query/random?" {% if current_path == "/Query/random?" %}class="is-active"{% endif %}>Random Page</a>
                         </li>
                     </ul>
                     <p class="menu-label is-hidden-touch">Interaction</p>
                     <ul class="menu-list">
                         <li>
-                            <a href="@/Interaction/Help.md">Help</a>
+                            <a href="/Interaction/help" {% if page.relative_path and page.relative_path == "Interaction/Help.md" %}class="is-active"{% endif %}>Help</a>
                         </li>
                         <li>
-                            <a href="@/Interaction/Contributing.md">Contributing</a>
+                            <a href="/Interaction/contributing" {% if page.relative_path and page.relative_path == "Interaction/Contributing.md" %}class="is-active"{% endif %}>Contributing</a>
                         </li>
                         <li>
-                            <a href="@/Interaction/Recent_Changes.md">Recent Changes</a>
-                        </li>
-                        <li>
-                            <a href="@/Interaction/New_Pages.md">New Pages</a>
-                        </li>
-                        <li>
-                            <a href="@/Interaction/Statistics.md">Statistics</a>
-                        </li>
-                        <li>
-                            <a href="@/Interaction/Requests.md">Requests</a>
+                            <a href="/Interaction/requests" {% if page.relative_path and page.relative_path == "Interaction/Requests.md" %}class="is-active"{% endif %}>Requests</a>
                         </li>
                     </ul>
                     <p class="menu-label is-hidden-touch">Tools</p>
                     <ul class="menu-list">
                         <li>
-                            <a href="https://wiki.magnilinux.org/Query/what_links_here?">What Links Here</a>
+                            <a href="/Query/what_links_here?" {% if current_path == "/Query/what_links_here?" %}class="is-active"{% endif %}>What Links Here</a>
                         </li>
                         <li>
-                            <a href="https://wiki.magnilinux.org/Query/related_changes?">Related Changes</a>
-                        </li>
-                        <li>
-                            <a href="https://wiki.magnilinux.org/Query/special_pages?">Special Pages</a>
-                        </li>
-                        <li>
-                            <a href="https://wiki.magnilinux.org/Query/printable_version?">Printable Version</a>
-                        </li>
-                        <li>
-                            <a href="https://wiki.magnilinux.org/Query/permanent_links?">Permanent Link</a>
-                        </li>
-                        <li>
-                            <a href="https://wiki.magnilinux.org/Query/page_information?">Page Information</a>
+                            <a onclick="window.print();">Printable Version</a>
                         </li>
                     </ul>
                 </div>
@@ -133,22 +117,95 @@
                             </a>
                         </div>
                     </div>
-                    {% block lang_select %}
-                    {% endblock lang_select %}
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <button class="button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
+                                {% if now_lang == "ar" %}
+                                الأرجنتين
+                                {% elif now_lang == "az" %}
+                                Azərbaycan
+                                {% elif now_lang == "be" %}
+                                Бельгія
+                                {% elif now_lang == "de" %}
+                                Deutsche
+                                {% elif now_lang == "en" %}
+                                English
+                                {% elif now_lang == "es" %}
+                                Español
+                                {% elif now_lang == "fr" %}
+                                Français
+                                {% elif now_lang == "it" %}
+                                Italiano
+                                {% endif %}
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                {% if now_lang != config.default_language %}
+                                    {% if page.path %}
+                                        {% set eng_path = page.path | split(pat = "/") | slice(start = 1) | join(sep = "/") %}
+                                    {% elif section.path %}
+                                        {% set eng_path = section.path | split(pat = "/") | slice(start = 1) | join(sep = "/") %}
+                                    {% else %}
+                                        {% set eng_path = "" %}
+                                        <a href="/{{ eng_path }}" class="dropdown-item">
+                                        English
+                                    </a>
+                                    {% endif %}
+                                {% endif %}
+                                {% if page.translations %}
+                                    {% for translation in page.translations %}
+                                        <a href="{{ translation.permalink }}" class="dropdown-item">
+                                            {% if translation.lang == "ar" %}
+                                        الأرجنتين
+                                        {% elif translation.lang == "az" %}
+                                        Azərbaycan
+                                        {% elif translation.lang == "be" %}
+                                        Бельгія
+                                        {% elif translation.lang == "de" %}
+                                        Deutsche
+                                        {% elif translation.lang == "es" %}
+                                        Español
+                                        {% elif translation.lang == "fr" %}
+                                        Français
+                                        {% elif translation.lang == "it" %}
+                                        Italiano
+                                        {% endif %}
+                                        </a>
+                                    {% endfor %}
+                                {% elif section.translations %}
+                                    {% for translation in section.translations %}
+                                        <a href="{{ translation.permalink }}" class="dropdown-item">
+                                            {% if translation.lang == "ar" %}
+                                        الأرجنتين
+                                        {% elif translation.lang == "az" %}
+                                        Azərbaycan
+                                        {% elif translation.lang == "be" %}
+                                        Бельгія
+                                        {% elif translation.lang == "de" %}
+                                        Deutsche
+                                        {% elif translation.lang == "es" %}
+                                        Español
+                                        {% elif translation.lang == "fr" %}
+                                        Français
+                                        {% elif translation.lang == "it" %}
+                                        Italiano
+                                        {% endif %}
+                                        </a>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="container space"></div>
                 <div id="mainContent">
                     {% block content %}{% endblock content %}
-                    <div class="box category">
-                    <p>Category: About Magni</p>
-                    
-                </div>
                 </div>
             </div>
             <div id="anchorMenu" class="container column is-2">
                 {% block anchor_menu %}{% endblock anchor_menu %}
             </div>
-
         </section>
         <footer class="footer">
             <div class="content has-text-centered">
@@ -159,7 +216,6 @@
                     </p>
             </div>
         </footer>
-
         {% block js_body %}
             {% if config.build_search_index %}
                 <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
@@ -167,8 +223,5 @@
             {% endif %}
             <script type="text/javascript" src="{{ get_url(path="js/main.js") | safe }}"></script>
         {% endblock js_body %}
-
     </body>
-</html>
-
 </html>
