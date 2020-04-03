@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="section">
+        <div class="content">
+            {% if terms %}
+                <div class="list box">
+                    {% for term in terms %}
+                        <a href="{{ term.permalink | safe }}">
+                            <span class="tag is-large is-primary">{{ term.name }}({{ term.pages | length }})</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
