@@ -1,0 +1,51 @@
+{% macro month(month) %}
+    {% if month == 1 %}
+        {% set m = "January" %}
+    {% elif month == 2 %}
+        {% set m = "February" %}
+    {% elif month == 3 %}
+        {% set m = "March" %}
+    {% elif month == 4 %}
+        {% set m = "April" %}
+    {% elif month == 5 %}
+        {% set m = "May" %}
+    {% elif month == 6 %}
+        {% set m = "June" %}
+    {% elif month == 7 %}
+        {% set m = "July" %}
+    {% elif month == 8 %}
+        {% set m = "August" %}
+    {% elif month == 9 %}
+        {% set m = "September" %}
+    {% elif month == 10 %}
+        {% set m = "October" %}
+    {% elif month == 11 %}
+        {% set m = "November" %}
+    {% elif month == 12 %}
+        {% set m = "December" %}
+    {% else %}
+        {% set m = month %}
+    {% endif %}
+    {{m}}
+{% endmacro month %}
+
+{% macro day(day) %}
+    {% if day == 1 %}
+        {% set d = "1st" %}
+    {% elif day == 2 %}
+        {% set d = "2nd" %}
+    {% elif day == 3 %}
+        {% set d = "3rd" %}
+    {% elif day == 21 %}
+        {% set d = "21st" %}
+    {% elif day == 22 %}
+        {% set d = "22nd" %}
+    {% elif day == 23 %}
+        {% set d = "23rd" %}
+    {% elif day == 31 %}
+        {% set d = "31st" %}    
+    {% else %}
+        {% set d = "{{day}}" ~ "th" %}
+    {% endif %}
+    {{d}}
+{% endmacro month %}
