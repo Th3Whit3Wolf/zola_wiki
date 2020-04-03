@@ -1,19 +1,18 @@
 +++
 title = "Magni Wiki"
 description = "Welcome to the Magni Linux Wiki"
+date = 2020-04-01
+[taxonomies]
+categories = ["MagniWiki"]
 +++
 
 # Main Page
-
----
 
 **Welcome to the MagniWiki: your source for Magni Linux documentation on the web.**
 
 Visit the Table of contents for a listing of article categories.
 
 ## The Distribution
-
----
 
 <div class="columns">
 <div class="column">
@@ -49,8 +48,6 @@ Categorized presentation of common official and AUR packages.
 </div>
 
 ## Our Community
-
----
 
 <div class="columns">
 <div class="column">
