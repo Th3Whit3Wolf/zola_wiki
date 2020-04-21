@@ -1,3 +1,4 @@
+const baseurl = "http://127.0.0.1:8083/?q="
 document.addEventListener('DOMContentLoaded', () => {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 );
 
 // Dropdowns
-
 var $dropdowns = getAll('.dropdown:not(.is-hoverable)');
 
 if ($dropdowns.length > 0) {
@@ -56,17 +56,6 @@ function showSelected(item) {
         return '';
     } else {
         return item + "=" + value + "&";
-    }
-}
-
-
-// Get Query
-function getQuery() {
-    var x = document.getElementById("Search").value;
-    if (x === null || x.trim() === '') {
-        return '';
-    } else {
-        return "q=" + x + "&";
     }
 }
 
@@ -137,5 +126,11 @@ for (var i = 0; i < quickLinks.length; i++) {
         }, 600);
 
     });
-
 }
+
+// Perform search
+document.getElementById('sbtn').addEventListener('click', e => {
+    let filterValue = document.getElementById('sbr').value.toLowerCase();
+    window.location.assign(baseurl + filterValue);
+    e.preventDefault();
+})
