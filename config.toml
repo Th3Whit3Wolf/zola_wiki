@@ -16,7 +16,7 @@ highlight_code = true
 
 # The theme to use for code highlighting.
 # See below for list of allowed values.
-highlight_theme = "one-dark"
+highlight_theme = "space"
 
 # When set to "true", an RSS feed is automatically generated.
 generate_rss = false
@@ -52,21 +52,21 @@ taxonomies = [
 #       {code = "it"}, # there won't be a RSS feed for Italian content
 #     ]
 #
-languages = [
-    {code = "az"},
-    {code = "be"},
-    {code = "de"},
-    {code = "es"},
-    {code = "fr"},
-    {code = "it"}
-]
+#languages = [
+#    {code = "az"},
+#    {code = "be"},
+#    {code = "de"},
+#    {code = "es"},
+#    {code = "fr"},
+#    {code = "it"}
+#]
 
 # When set to "true", the Sass files in the `sass` directory are compiled.
 compile_sass = false
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
-build_search_index = false
+build_search_index = true
 
 # A list of glob patterns specifying asset files to ignore when the content
 # directory is processed. Defaults to none, which means that all asset files are
@@ -116,3 +116,24 @@ anchors = "on"
 # You can put any kind of data here. The data
 # will be accessible in all templates.
 [extra]
+
+# Currently supported languages
+# - Assembly x86 (NASM) -> ["asm", "inc", "nasm"]
+# - Crystal -> ["cr"]
+# - Dart -> ["dart"]
+# - Elixir -> ["ex", "exs"]
+# - fsharp -> ["fs"]
+# - Handlebars -> ["handlebars", "handlebars.html", "hbr", "hbrs", "hbs", "hdbs", "hjs", "mu", "mustache", "ra
+# - Jinja2 -> ["j2", "jinja2"]
+# - Kotlin -> ["kt", "kts"]
+# - MiniZinc (MZN) -> ["dzn", "mzn"]
+# - Nim -> ["nim", "nims"]
+# - Nix -> ["nix"]
+# - Plain Text -> ["txt"]
+# - PowerShell -> ["ps1", "psd1", "psm1"]
+# - Reason -> ["re", "rei"]
+# - SWI-Prolog -> ["pro"]
+# - TOML -> ["tml", "toml"]
+# - TypeScript -> ["ts"]
+# - TypeScriptReact -> ["tsx"]
+# - VimL -> ["vim"]
