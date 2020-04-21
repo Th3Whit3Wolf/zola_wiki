@@ -1,6 +1,6 @@
 <article class="message is-info">
     <div class="message-body">
     <strong>{{ head }}</strong><br/>
-    {{body}}
+    {{ body | markdown(inline=true) | safe }}
     </div>
 </article>
