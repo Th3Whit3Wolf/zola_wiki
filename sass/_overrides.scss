@@ -5,16 +5,6 @@ body {
     letter-spacing: 1px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
 .button {
     transition: all 200ms ease;
     text-transform: uppercase;
@@ -192,7 +182,7 @@ a.toc-is-active {
 
 .container.search {
     background-color: #fefefe;
-    padding: 1rem 2.5rem 1rem calc(2.5rem + 5px);
+    padding: calc(1.5rem + 5px) 2.5rem 1.5rem 0rem;
     border-radius: $radius-large;
     box-shadow: $box-shadow;
 }
@@ -221,8 +211,14 @@ div.control a.button {
     font-weight: $weight-bold;
 }  
 
-.category {
-    margin : 0em 1em;
+
+.box.category {
+    margin : -1em 0em;
+    margin-top: 3em;
+}
+
+article.message,pre {
+    margin: 1.5em 0;
 }
 
 pre {
@@ -234,13 +230,5 @@ code {
     background-color: $white-ter;
     font-family: $family-code;
     color: $royal;
-}
-
-h1, h2, h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-h1, h2 {
-    border-bottom: 1px solid #e1e1e1;
+    border-radius: .5em;
 }
