@@ -1,0 +1,6 @@
+<article class="message is-success">
+    <div class="message-body">
+    <strong>{{ head }}</strong><br/>
+    {{ body | markdown(inline=true) | safe }}
+    </div>
+</article>
