@@ -5,27 +5,38 @@
   font-style: normal;
 }
 
+/*
+// Bold
 @font-face {
-  font-family: 'Fira Sans';
-  src: local("Fira Sans Bold"), url("../fonts/Fira/woff2/FiraSans-Bold.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-Bold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Fira Sans';
+    src: local("Fira Sans Bold"),
+        url("../fonts/Fira/woff2/FiraSans-Bold.woff2") format("woff2"),
+        url("../fonts/Fira/woff/FiraSans-Bold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
 }
 
+// Italic
 @font-face {
-  font-family: 'Fira Sans';
-  src: local("Fira Sans Regular Italic"), url("../fonts/Fira/woff2/FiraSans-RegularItalic.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-RegularItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
+    font-family: 'Fira Sans';
+    src: local("Fira Sans Regular Italic"),
+        url("../fonts/Fira/woff2/FiraSans-Italic.woff2") format("woff2"),
+        url("../fonts/Fira/woff/FiraSans-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
 }
 
+// Bold and Italic
 @font-face {
-  font-family: 'Fira Sans';
-  src: local("Fira Sans Bold Italic"), url("../fonts/Fira/woff2/FiraSans-BoldItalic.woff2") format("woff2"), url("../fonts/Fira/woff/FiraSans-BoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
+    font-family: 'Fira Sans';
+    src: local("Fira Sans Bold Italic"),
+        url("../fonts/Fira/woff2/FiraSans-BoldItalic.woff2") format("woff2"),
+        url("../fonts/Fira/woff/FiraSans-BoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
 }
 
+*/
 @font-face {
   font-family: 'JetBrains Mono';
   src: url("../fonts/JetBrainsMono/woff2/JetBrainsMono-Regular.woff2") format("woff2"), url("../fonts/JetBrainsMono/woff/JetBrainsMono-Regular.woff") format("woff");
@@ -44,6 +55,25 @@ h2 {
 
 h3 {
   font-size: 21px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h2, h3 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h1, h2 {
+  border-bottom: 1px solid #e1e1e1;
 }
 
 @-webkit-keyframes spinAround {
@@ -11927,16 +11957,6 @@ body {
   letter-spacing: 1px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
 .button {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -12220,7 +12240,7 @@ a.toc-is-active:hover {
 
 .container.search {
   background-color: #fefefe;
-  padding: 1rem 2.5rem 1rem calc(2.5rem + 5px);
+  padding: calc(1.5rem + 5px) 2.5rem 1.5rem 0rem;
   border-radius: 8px;
   -webkit-box-shadow: 0 1px 2px #eaeaea inset;
           box-shadow: 0 1px 2px #eaeaea inset;
@@ -12256,8 +12276,13 @@ div.control a.button {
   font-weight: 700;
 }
 
-.category {
-  margin: 0em 1em;
+.box.category {
+  margin: -1em 0em;
+  margin-top: 3em;
+}
+
+article.message, pre {
+  margin: 1.5em 0;
 }
 
 pre {
@@ -12269,15 +12294,7 @@ code {
   background-color: #ecf0f1;
   font-family: "JetBrains Mono";
   color: #7851a9;
-}
-
-h1, h2, h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-h1, h2 {
-  border-bottom: 1px solid #e1e1e1;
+  border-radius: .5em;
 }
 
 @media print {
